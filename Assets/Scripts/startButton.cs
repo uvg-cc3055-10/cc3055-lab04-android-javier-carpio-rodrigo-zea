@@ -11,6 +11,7 @@ public class startButton : MonoBehaviour {
     public Text highscore;
 	// Use this for initialization
 	void Start () {
+        /*Llama al metodo para asignar el puntaje*/
         setText();
 	}
 	
@@ -21,11 +22,13 @@ public class startButton : MonoBehaviour {
 
     public void changeScene()
     {
+        /*Al momento de dar clic al boton, cambia de escena*/
         SceneManager.LoadScene("Level1");    
     }
 
     public void setText()
     {
+        /*Asigna el puntaje*/
         highscore.text = "Highscore: " + PlayerPrefs.GetFloat("Highscore");
     }
 }
